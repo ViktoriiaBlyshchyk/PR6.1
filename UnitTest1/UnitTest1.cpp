@@ -13,11 +13,11 @@ namespace UnitTest1
 		TEST_METHOD(TestMethod1)
 		{
 			int const n = 3;
-			int a[n] = { 2, 5, 7 };
+			int a[n] = { -2, 5, 7 };
 			int count = 0;
 			for (int i = 0; i < n; i++)
 			{
-				if (a[i] > 0 && abs(a[i]) % 5 != 0)
+				if ((i > 0) && !(i % 5 == 0))
 					count++;
 			}
 			Assert::AreEqual(2, count);

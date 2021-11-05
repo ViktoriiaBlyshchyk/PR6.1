@@ -22,7 +22,7 @@ int Count(int* a, const int n)
 	int count = 0;
 	for (int i = 0; i < n; i++)
 	{
-		if (a[i] > 0 && abs(a[i]) % 5 != 0)
+		if ((i > 0) && !(i % 5 == 0))
 		{
 			count++;
 		}
@@ -33,7 +33,7 @@ int Count(int* a, const int n)
 void Zero(int* a, const int n)
 {
 	for (int i = 0; i < n; i++)
-		if (a[i] > 0 && abs(a[i]) % 5 != 0)
+		if ((i > 0) && !(i % 5 == 0))
 			a[i] = 0;
 }
 
@@ -41,7 +41,7 @@ int Sum(int* a, const int n)
 {
 	int S = 0;
 	for (int i = 0; i < n; i++)
-		if (a[i] > 0 && abs(a[i]) % 5 != 0)
+		if ((i > 0) && !(i % 5 == 0))
 			S += a[i];
 	return S;
 }
